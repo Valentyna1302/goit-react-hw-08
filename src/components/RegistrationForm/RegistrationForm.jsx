@@ -41,21 +41,27 @@ const RegistrationForm = () => {
         initialValues={initialValues}
         onSubmit={handleSubmit}
         validationSchema={RegisterSchema}
+        autoComplete="off"
       >
-        <Form className={s.form}>
+        <Form className={s.form} autoComplete="off">
           <label className={s.labelWraper}>
             <span>Name:</span>
-            <Field className={s.input} name="name" />
+            <Field className={s.input} name="name" autoComplete="off" />
             <ErrorMessage className={s.span} name="name" component="span" />
           </label>
           <label className={s.labelWraper}>
             <span>Email:</span>
-            <Field className={s.input} name="email" />
+            <Field className={s.input} name="email" autoComplete="off" />
             <ErrorMessage className={s.span} name="email" component="span" />
           </label>
           <label className={s.labelWraper}>
             <span>Password:</span>
-            <Field className={s.input} name="password" type="password" />
+            <Field
+              className={s.input}
+              name="password"
+              type="password"
+              autoComplete="off"
+            />
             <ErrorMessage className={s.span} name="password" component="span" />
           </label>
           <button className={s.button} type="submit">

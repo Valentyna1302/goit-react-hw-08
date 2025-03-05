@@ -50,7 +50,7 @@ const ContactForm = () => {
       validationSchema={ContactSchema}
     >
       {({ setFieldValue }) => (
-        <Form className={s.form}>
+        <Form className={s.form} autoComplete="off">
           <div className={s.labelWraper}>
             <label htmlFor={nameFieldId}>Name</label>
             <Field
