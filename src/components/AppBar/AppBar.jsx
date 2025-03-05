@@ -1,5 +1,11 @@
+import Navigation from "../Navigation/Navigation";
+
 const AppBar = () => {
-  return <div></div>;
+  return (
+    <header>
+      <Navigation />
+    </header>
+  );
 };
 
 export default AppBar;
