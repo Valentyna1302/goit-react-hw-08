@@ -1,5 +1,9 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import toast from "react-hot-toast";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import { login } from "../../redux/auth/operations";
 import s from "../RegistrationForm/RegistrationForm.module.css";
 
 const LoginSchema = Yup.object().shape({
@@ -14,8 +18,18 @@ const LoginForm = () => {
     password: "",
   };
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handleSubmit = (values, options) => {
     console.log(values);
+    dispatch(login(values))
+      .unwrap()
+      .then((res) => {
+        toast.success(`Welcome, ${res.user.email}`);
+        navigate("/contacts", { replace: true });
+      })
+      .catch(() => toast.error("Invalid data"));
     options.resetForm();
   };
 
@@ -43,7 +57,7 @@ const LoginForm = () => {
             <ErrorMessage className={s.span} name="password" component="span" />
           </label>
           <button className={s.button} type="submit">
-            Register
+            Login
           </button>
         </Form>
       </Formik>
