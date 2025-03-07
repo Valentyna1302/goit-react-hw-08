@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { logout } from "../auth/operations";
 import { addContact, deleteContact, fetchContacts } from "./operations";
 
 const initialState = {
@@ -43,7 +44,8 @@ const slice = createSlice({
           (task) => task.id !== action.payload.id
         );
       })
-      .addCase(deleteContact.rejected, handleRejected);
+      .addCase(deleteContact.rejected, handleRejected)
+      .addCase(logout.fulfilled, () => initialState);
   },
 });
 
