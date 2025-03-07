@@ -34,7 +34,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
+    <div className={s.container}>
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}

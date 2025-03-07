@@ -1,13 +1,13 @@
 .form {
   max-width: 300px;
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 2px 2px 4px 4px grey;
-  /* margin-bottom: ; */
 }
 
 .labelWraper {
