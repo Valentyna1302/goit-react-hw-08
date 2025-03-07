@@ -1,0 +1,13 @@
+.title {
+  font-weight: normal;
+  text-shadow: 1px 1px 1px gray;
+  margin-bottom: 15px;
+}
+
+.text {
+  font-size: 20px;
+}
+
+.container {
+  text-align: center;
+}
