@@ -60,7 +60,7 @@ const LoginForm = () => {
             Login
           </button>
           <p className={s.text}>
-            Don&apost have an account yet? <Link to="/register">Sign up!</Link>
+            Don&apos;t have an account yet? <Link to="/register">Sign up!</Link>
           </p>
         </Form>
       </Formik>
