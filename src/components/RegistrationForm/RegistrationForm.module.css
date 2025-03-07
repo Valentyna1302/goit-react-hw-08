@@ -7,7 +7,7 @@
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 2px 2px 4px 4px grey;
-  margin-bottom: 20px;
+  /* margin-bottom: ; */
 }
 
 .labelWraper {
@@ -31,6 +31,7 @@
 
 .button {
   margin: 0 auto;
+  margin-top: 10px;
   width: 120px;
   padding: 10px 20px;
   border-radius: 8px;
@@ -42,4 +43,8 @@
   &:focus {
     background-color: lightcyan;
   }
+}
+
+.text {
+  margin: 0 auto;
 }

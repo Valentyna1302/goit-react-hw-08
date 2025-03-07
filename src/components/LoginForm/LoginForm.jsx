@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { login } from "../../redux/auth/operations";
 import s from "../RegistrationForm/RegistrationForm.module.css";
@@ -59,6 +59,9 @@ const LoginForm = () => {
           <button className={s.button} type="submit">
             Login
           </button>
+          <p className={s.text}>
+            Don&apost have an account yet? <Link to="/register">Sign up!</Link>
+          </p>
         </Form>
       </Formik>
     </div>

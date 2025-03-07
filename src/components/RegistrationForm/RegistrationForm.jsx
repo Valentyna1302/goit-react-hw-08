@@ -1,5 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import { register } from "../../redux/auth/operations";
 import s from "./RegistrationForm.module.css";
@@ -72,6 +73,9 @@ const RegistrationForm = () => {
           <button className={s.button} type="submit">
             Register
           </button>
+          <p className={s.text}>
+            Already have an account? <Link to="/login">Sign in!</Link>
+          </p>
         </Form>
       </Formik>
     </div>
